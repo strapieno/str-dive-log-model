@@ -5,7 +5,7 @@ return [
             'Strapieno\DiveLog\Model\Criteria\Mongo\DiveLogMongoCollectionCriteria' => 'Strapieno\DiveLog\Model\Criteria\Mongo\DiveLogMongoCollectionCriteria',
         ],
         'aliases' => [
-            'Strapieno\DiveLog\Model\Criteria\DiveLogCollectionCriteria' => 'Strapieno\DiveLog\Model\Criteria\Mongo\+6MongoCollectionCriteria',
+            'Strapieno\DiveLog\Model\Criteria\DiveLogCollectionCriteria' => 'Strapieno\DiveLog\Model\Criteria\Mongo\DiveLogMongoCollectionCriteria',
         ]
     ],
     'mongodb' => [
@@ -21,7 +21,7 @@ return [
     ],
     'matryoshka-objects' => [
         'DiveLog' => [
-            'type' => 'namespace Strapieno\DiveLog\Model\Entity\DiveLogEntity',
+            'type' => 'Strapieno\DiveLog\Model\Entity\DiveLogEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
         ]
     ],

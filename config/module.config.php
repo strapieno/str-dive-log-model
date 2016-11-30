@@ -152,58 +152,7 @@ return [
             ],
         ],
         'Strapieno\DiveLog\Model\InputFilter\DefaultInputFilter' => [
-            // TODO wrong shold stay in api module
-            'user_id' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'user_id',
-                'validators' => [
-                    'user-entityexist' => [
-                        'name' => 'user-entityexist'
-                    ]
-                ]
 
-            ],
-            'fax_number' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'fax_number',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-                // TODO add validator
-            ],
-            'telephone' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'telephone',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-                // TODO add validator
-            ],
-            'name' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'name',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-            ],
-            'geo_coordinate' => [
-                'name' => 'geo_coordinate',
-                'type' => 'Strapieno\DiveLog\Model\InputFilter\DefaultGeoCoordiateInputFilter'
-            ],
-            'postal_address' => [
-                'name' => 'postal_address',
-                'type' => 'Strapieno\DiveLog\Model\InputFilter\DefaultPostalAddressInputFilter'
-            ],
         ],
     ]
 ];

@@ -1,6 +1,7 @@
 <?php
 namespace Strapieno\DiveLog\Model\Entity;
 
+use DateTime;
 use Matryoshka\Model\Object\ActiveRecord\AbstractActiveRecord;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareInterface;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareTrait;
@@ -70,7 +71,7 @@ class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, Und
      * @param DateTime $dateStartDive
      * @return $this
      */
-    public function setDateStartDive(DateTime $dateStartDive)
+    public function setDateStartDive(DateTime $dateStartDive = null)
     {
         $this->dateStartDive = $dateStartDive;
         return $this;

@@ -1,6 +1,7 @@
 <?php
 namespace Strapieno\DiveLog\Model\Hydrator\Mongo;
 
+use Matryoshka\Model\Wrapper\Mongo\Hydrator\Strategy\MongoDateStrategy;
 use Strapieno\Utils\Hydrator\Mongo\DateHistoryHydrator;
 
 /**

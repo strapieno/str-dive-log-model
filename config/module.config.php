@@ -38,9 +38,21 @@ return [
             ],
         ],
     ],
+    'StartPointDiveLog' => [
+        'beach',
+        'sea'
+
+    ],
+    'strapieno-array-validators' => [
+        'StartPointDiveLogValidator' => [
+            'name_key_array_config' => 'StartPointDiveLog'
+        ]
+    ],
     'strapieno_input_filter_specs' => [
         'Strapieno\DiveLog\Model\InputFilter\DefaultInputFilter' => [
             'visibility' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'visibility',
                 'filters' => [
                     'stringtrim' =>  [
@@ -54,6 +66,8 @@ return [
                 ]
             ],
             'current' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'current',
                 'filters' => [
                     'stringtrim' =>  [
@@ -67,6 +81,8 @@ return [
                 ]
             ],
             'temperature' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'temperature',
                 'filters' => [
                     'stringtrim' =>  [
@@ -80,6 +96,8 @@ return [
                 ]
             ],
             'depth' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'depth',
                 'filters' => [
                     'stringtrim' =>  [
@@ -93,6 +111,8 @@ return [
                 ]
             ],
             'duration_dive' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'duration_dive',
                 'filters' => [
                     'stringtrim' =>  [
@@ -106,6 +126,8 @@ return [
                 ]
             ],
             'start_point_dive' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'start_point_dive',
                 'filters' => [
                     'stringtrim' =>  [
@@ -119,6 +141,8 @@ return [
                 ]
             ],
             'date_when' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'date_when',
                 'filters' => [
                     'stringtrim' =>  [

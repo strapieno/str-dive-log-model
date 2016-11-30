@@ -39,120 +39,100 @@ return [
         ],
     ],
     'strapieno_input_filter_specs' => [
-        'Strapieno\DiveLog\Model\InputFilter\DefaultPostalAddressInputFilter' => [
-            'address_locality' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'address_locality',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-                // TODO add validator
-            ],
-            'address_region' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'address_region',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-                // TODO add validator
-            ],
-
-            'postal_code' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'postal_code',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-                // TODO add validator
-            ],
-
-            'street_address' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'street_address',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-                // TODO add validator
-            ],
-
-            'address_country' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'address_country',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ]
-                // TODO add validator
-            ],
-        ],
-        'Strapieno\DiveLog\Model\InputFilter\DefaultGeoCoordiateInputFilter' => [
-            'latitude' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'latitude',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ],
-                'validators' => [
-                    'latitude' => [
-                        'name' => 'latitude'
-                    ]
-                ]
-            ],
-            'longitude' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'longitude',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ],
-                'validators' => [
-                    'longitude' => [
-                        'name' => 'longitude'
-                    ]
-                ]
-            ],
-            'elevation' => [
-                'require' => false,
-                'allow_empty' => true,
-                'name' => 'elevation',
-                'filters' => [
-                    'stringtrim' =>  [
-                        'name' => 'stringtrim',
-                    ]
-                ],
-                'validators' => [
-                    'longitude' => [
-                        'name' => 'between',
-                        'options' => [
-                            'min' => -10994, // Challenger Abyss
-                            'max' => 8848 // Everest
-                        ],
-                    ]
-                ]
-
-            ],
-        ],
         'Strapieno\DiveLog\Model\InputFilter\DefaultInputFilter' => [
-
-        ],
+            'visibility' => [
+                'name' => 'visibility',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'digits' => [
+                        'name' => 'digits'
+                    ]
+                ]
+            ],
+            'current' => [
+                'name' => 'current',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'digits' => [
+                        'name' => 'digits'
+                    ]
+                ]
+            ],
+            'temperature' => [
+                'name' => 'temperature',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'digits' => [
+                        'name' => 'digits'
+                    ]
+                ]
+            ],
+            'depth' => [
+                'name' => 'depth',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'digits' => [
+                        'name' => 'digits'
+                    ]
+                ]
+            ],
+            'duration_dive' => [
+                'name' => 'duration_dive',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'digits' => [
+                        'name' => 'digits'
+                    ]
+                ]
+            ],
+            'start_point_dive' => [
+                'name' => 'start_point_dive',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'StartPointDiveLog' => [
+                        'name' => 'StartPointDiveLogValidator'
+                    ]
+                ]
+            ],
+            'date_when' => [
+                'name' => 'date_when',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'date' => [
+                        'name' => 'date',
+                        'options' => [
+                            'format' => 'Y-m-d'
+                        ]
+                    ]
+                ]
+            ],
     ]
 ];

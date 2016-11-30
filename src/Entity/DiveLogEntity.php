@@ -5,8 +5,8 @@ use Matryoshka\Model\Object\ActiveRecord\AbstractActiveRecord;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareInterface;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareTrait;
 use Strapieno\Utils\Model\Entity\EntityInterface;
-use Strapieno\Utils\Model\Object\Rating\UnderWaterAwareTrait;
-use Strapieno\Utils\Model\Object\Rating\UnderWaterInterface;
+use Strapieno\Utils\Model\Object\UnderWater\UnderWaterInterface;
+use Strapieno\Utils\Model\Object\UnderWater\UnderWaterTrait;
 
 /**
  * Class DiveLogEntity
@@ -14,7 +14,7 @@ use Strapieno\Utils\Model\Object\Rating\UnderWaterInterface;
 class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, UnderWaterInterface, DateHistoryAwareInterface
 {
     use DateHistoryAwareTrait;
-    use UnderWaterAwareTrait;
+    use UnderWaterTrait;
 
     /**
      * @var DateTime|null

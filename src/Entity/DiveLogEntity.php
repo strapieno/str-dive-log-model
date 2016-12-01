@@ -23,11 +23,6 @@ class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, Und
     protected $dateWhen;
 
     /**
-     * @var DateTime|null
-     */
-    protected $dateStartDive;
-
-    /**
      * Minuts
      *
      * @var int
@@ -56,24 +51,6 @@ class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, Und
     public function setDateWhen(DateTime $dateWhen = null)
     {
         $this->dateWhen = $dateWhen;
-        return $this;
-    }
-
-    /**
-     * @return null|DateTime
-     */
-    public function getDateStartDive()
-    {
-        return $this->dateStartDive;
-    }
-
-    /**
-     * @param DateTime $dateStartDive
-     * @return $this
-     */
-    public function setDateStartDive(DateTime $dateStartDive = null)
-    {
-        $this->dateStartDive = $dateStartDive;
         return $this;
     }
 

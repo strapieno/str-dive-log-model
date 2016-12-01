@@ -15,6 +15,6 @@ class DiveLogModelMongoHydrator extends DateHistoryHydrator
     public function __construct($underscoreSeparatedKeys = true)
     {
         parent::__construct($underscoreSeparatedKeys);
-        $this->addStrategy('date_when', new MongoDateStrategy('Y-m-d'));
+        $this->addStrategy('date_when', new MongoDateStrategy('Y-m-d H:i'));
     }
 }

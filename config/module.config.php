@@ -153,7 +153,7 @@ return [
                     'date' => [
                         'name' => 'date',
                         'options' => [
-                            'format' => 'Y-m-d'
+                            'format' => 'Y-m-d H:i'
                         ]
                     ]
                 ]

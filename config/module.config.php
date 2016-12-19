@@ -61,7 +61,8 @@ return [
                 ],
                 'validators' => [
                     'digits' => [
-                        'name' => 'digits'
+                        'name' => 'digits',
+                        'break_chain_on_failure' => true
                     ]
                 ]
             ],
@@ -76,7 +77,8 @@ return [
                 ],
                 'validators' => [
                     'digits' => [
-                        'name' => 'digits'
+                        'name' => 'digits',
+                        'break_chain_on_failure' => true
                     ]
                 ]
             ],
@@ -91,7 +93,8 @@ return [
                 ],
                 'validators' => [
                     'digits' => [
-                        'name' => 'digits'
+                        'name' => 'digits',
+                        'break_chain_on_failure' => true
                     ]
                 ]
             ],
@@ -106,7 +109,8 @@ return [
                 ],
                 'validators' => [
                     'digits' => [
-                        'name' => 'digits'
+                        'name' => 'digits',
+                        'break_chain_on_failure' => true
                     ]
                 ]
             ],
@@ -121,7 +125,8 @@ return [
                 ],
                 'validators' => [
                     'digits' => [
-                        'name' => 'digits'
+                        'name' => 'digits',
+                        'break_chain_on_failure' => true
                     ]
                 ]
             ],
@@ -152,6 +157,7 @@ return [
                 'validators' => [
                     'date' => [
                         'name' => 'date',
+                        'break_chain_on_failure' => true,
                         'options' => [
                             'format' => 'Y-m-d H:i'
                         ]

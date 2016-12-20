@@ -130,6 +130,16 @@ return [
                     ]
                 ]
             ],
+            'note' => [
+                'require' => false,
+                'allow_empty' => true,
+                'name' => 'note',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ]
+            ],
             'start_point_dive' => [
                 'require' => false,
                 'allow_empty' => true,

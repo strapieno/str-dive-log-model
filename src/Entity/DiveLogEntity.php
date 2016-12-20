@@ -37,6 +37,11 @@ class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, Und
     protected $startPointDive;
 
     /**
+     * @var string
+     */
+    protected $note;
+
+    /**
      * @return DateTime|null
      */
     public function getDateWhen()
@@ -87,6 +92,24 @@ class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, Und
     public function setStartPointDive($startPointDive)
     {
         $this->startPointDive = $startPointDive;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * @param string $note
+     * @return $this
+     */
+    public function setNote($note)
+    {
+        $this->note = $note;
         return $this;
     }
 }

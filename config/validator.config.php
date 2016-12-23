@@ -7,6 +7,6 @@ return [
         'Strapieno\DiveLog\Model\Validator\EntityExist' => 'Strapieno\DiveLog\Model\Validator\EntityExist'
     ],
     'aliases' => [
-        'divelogentityexist' => 'Strapieno\DiveLog\Model\Validator\EntityExist'
+        'divelog-entityexist' => 'Strapieno\DiveLog\Model\Validator\EntityExist'
     ],
 ];

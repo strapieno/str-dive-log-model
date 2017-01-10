@@ -18,11 +18,6 @@ class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, Und
     use UnderWaterTrait;
 
     /**
-     * @var string
-     */
-    protected $name;
-
-    /**
      * @var DateTime|null
      */
     protected $dateWhen;
@@ -115,24 +110,6 @@ class DiveLogEntity extends AbstractActiveRecord implements EntityInterface, Und
     public function setNote($note)
     {
         $this->note = $note;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
         return $this;
     }
 }
